@@ -10,23 +10,22 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
-            position(x1, y1, sym1);
-            
-            int x2 = 2;
-            int y2 = 7;
-            char sym2 = '№';
-            position(x2, y2, sym2);
+            Point p1 = new Point(); // Создаем экземпляр p1 класса Point
+            p1.x = 1;
+            p1.y = 3;
+            p1.sym = '&';
+            p1.position();
 
+            Point p2 = new Snake.Point();
+            p2.x = 3;
+            p2.y = 4;
+            p2.sym = '┴';
+
+            p2.position();
+                      
             Console.ReadLine();
         }
 
-        static void position(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+        
     }
 }
